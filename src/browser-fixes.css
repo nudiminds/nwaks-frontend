@@ -1,0 +1,73 @@
+/* Cross-browser alignment fixes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap');
+
+/* Universal box-sizing for all browsers */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Fix for Firefox */
+@-moz-document url-prefix() {
+  body {
+    scrollbar-width: thin;
+  }
+}
+
+/* Fix for Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  img, svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .safari_fix {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Fix for Edge/IE */
+@supports (-ms-ime-align: auto) {
+  body {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  html {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure no horizontal scrolling */
+  .app-container,
+  .nav-header,
+  .hero-section,
+  .content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Image and media fixes */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  svg {
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* General text rendering improvement */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
