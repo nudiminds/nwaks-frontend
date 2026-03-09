@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import { Toaster } from "react-hot-toast"
+import { Analytics } from "@vercel/analytics/react"
 
 import MainLayout from "./layout/MainLayout"
 import Home from "./pages/Home"
@@ -39,8 +40,10 @@ import EditMedia from "./admin/pages/EditMedia"
 
 function App() {
   return (
-    <><Toaster position="top-right" reverseOrder={false} />
-    <Routes>
+    <>
+      <Toaster position="top-right" reverseOrder={false} />
+      <Analytics />
+      <Routes>
 
       {/* PUBLIC WEBSITE */}
       <Route
