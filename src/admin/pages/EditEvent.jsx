@@ -17,6 +17,7 @@ export default function EditEvent() {
   const [locEn, setLocEn] = useState("")
   const [locKn, setLocKn] = useState("")
   const [date, setDate] = useState("")
+  const [link, setLink] = useState("")
   const [image, setImage] = useState(null)
   const [currentImage, setCurrentImage] = useState("")
   const [imagePreview, setImagePreview] = useState(null)
@@ -39,6 +40,7 @@ export default function EditEvent() {
         setLocEn(event.location.en)
         setLocKn(event.location.kn)
         setDate(event.date.split("T")[0])
+        setLink(event.link || "")
         setCurrentImage(event.image || "")
       } catch (error) {
         console.error(error)
@@ -114,6 +116,7 @@ export default function EditEvent() {
           description: { en: descEn, kn: descKn },
           location: { en: locEn, kn: locKn },
           date,
+          link,
           image: imageUrl
         },
         {
@@ -287,6 +290,19 @@ export default function EditEvent() {
               </div>
 
               <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Event Link
+                </label>
+                <input
+                  type="url"
+                  placeholder="https://example.com"
+                  className="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                  value={link}
+                  onChange={(e) => setLink(e.target.value)}
+                />
+              </div>
+
+              <div className="md:col-span-2">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Event Image
                 </label>

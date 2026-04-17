@@ -74,11 +74,13 @@ export default function UpcomingEvents() {
 
               {/* Event Image */}
               {event.image && (
-                <img
-                  src={event.image}
-                  alt={getText(event.title)}
-                  className="w-full h-56 object-cover"
-                />
+                <div className="w-full h-56 bg-gray-50 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={getText(event.title)}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               )}
 
               <div className="p-8">
@@ -103,9 +105,21 @@ export default function UpcomingEvents() {
                 )}
 
                 {/* Description */}
-                <p className="text-charcoal leading-relaxed">
+                <p className="text-charcoal leading-relaxed mb-6">
                   {getText(event.description)}
                 </p>
+
+                {/* Event Link */}
+                {event.link && (
+                  <a
+                    href={event.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-xl shadow-sm transition duration-300"
+                  >
+                    Visit Link
+                  </a>
+                )}
 
               </div>
 
