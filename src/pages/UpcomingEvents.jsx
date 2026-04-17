@@ -19,7 +19,8 @@ export default function UpcomingEvents() {
   }
 
   const formatDate = (dateString) => {
-    const date = new Date(dateString)
+    // Append T00:00:00 to force parsing in the local timezone and bypass UTC timezone shift
+    const date = dateString.includes('T') ? new Date(dateString) : new Date(dateString + 'T00:00:00')
 
     return date.toLocaleDateString("en-US", {
       year: "numeric",
@@ -30,18 +31,18 @@ export default function UpcomingEvents() {
 
   useEffect(() => {
 
-  const fetchEvents = async () => {
-    try {
-      const res = await getUpcomingEvents()
-      setEvents(res.data)
-    } catch (error) {
-      console.error(error)
+    const fetchEvents = async () => {
+      try {
+        const res = await getUpcomingEvents()
+        setEvents(res.data)
+      } catch (error) {
+        console.error(error)
+      }
     }
-  }
 
-  fetchEvents()
+    fetchEvents()
 
-}, [language])
+  }, [language])
 
   return (
 
@@ -117,7 +118,7 @@ export default function UpcomingEvents() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-xl shadow-sm transition duration-300"
                   >
-                    Visit Link
+                    {t.upcomingEvents.link}
                   </a>
                 )}
 
@@ -132,7 +133,7 @@ export default function UpcomingEvents() {
       </div>
 
     </div>
-    
+
 
   )
 }

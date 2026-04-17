@@ -23,11 +23,10 @@ export default function EventsList() {
     fetchEvents()
   }, [])
 
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
+  const todayString = new Date().toISOString().split("T")[0]
 
-  const upcoming = events.filter(e => new Date(e.date) >= today)
-  const past = events.filter(e => new Date(e.date) < today)
+  const upcoming = events.filter(e => String(e.date) >= todayString)
+  const past = events.filter(e => String(e.date) < todayString)
 
   return (
     <AdminLayout>
@@ -142,7 +141,7 @@ export default function EventsList() {
 }
 
 function EventCard({ event, navigate, type }) {
-  const eventDate = new Date(event.date)
+  const eventDate = event.date?.includes?.('T') ? new Date(event.date) : new Date(event.date + 'T00:00:00')
   
   return (
     <div className={`bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-200 group ${

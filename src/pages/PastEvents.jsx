@@ -16,7 +16,8 @@ export default function PastEvents() {
 
   // format date
   const formatDate = (dateString) => {
-    const date = new Date(dateString)
+    // Append T00:00:00 to force parsing in the local timezone and bypass UTC timezone shift
+    const date = dateString?.includes?.('T') ? new Date(dateString) : new Date(dateString + 'T00:00:00')
 
     return date.toLocaleDateString("en-US", {
       year: "numeric",
