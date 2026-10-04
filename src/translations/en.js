@@ -628,11 +628,11 @@ const en = {
         icon: "Award"
       }
     ],
-    "2024": {
-      title: "Rajyothsava 2024",
-      description: "Our 2024 Rajyothsava celebration was held on November 3rd at the Jones Center in Springdale. Over 300 community members attended the event, which featured 20+ cultural performances, community awards, and a traditional dinner.",
+    "2025": {
+      title: "Rajyothsava 2025",
+      description: "Our 2025 Rajyothsava celebration was held on November 3rd at the Jones Center in Springdale. Over 500 community members attended the event, which featured 20+ cultural performances, community awards, and a traditional dinner.",
       stats: [
-        { label: "Attendees", value: "300+", key: "attendees" },
+        { label: "Attendees", value: "500+", key: "attendees" },
         { label: "Performances", value: "20+", key: "performances" },
         { label: "Awards", value: "5", key: "awards" }
       ]
