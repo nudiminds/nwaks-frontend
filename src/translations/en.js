@@ -227,15 +227,11 @@ const en = {
         position: "Joint Treasurer",
         alt: "Srivasthsa Rajagopal - Joint Treasurer"
       },
-      {
-        name: "Shri Adarsh Iyengar",
-        position: "Director - Cultural Committee",
-        alt: "Adarsh Iyengar - Director Cultural Committee"
-      },
+      
       {
         name: "Smt Suprita Shetty",
-        position: "Co-Director - Cultural Committee",
-        alt: "Suprita Shetty - Co-Director Cultural Committee"
+        position: "Director - Cultural Committee",
+        alt: "Suprita Shetty - Director Cultural Committee"
       },
       {
         name: "Shri Harish Nayak",
@@ -257,11 +253,7 @@ const en = {
         position: "Co-Director - Tech & Social Media",
         alt: "Avinash Shivakumar - Co-Director Tech & Social Media"
       },
-      {
-        name: "Shri Santhosh Anand",
-        position: "Co-Director - Tech",
-        alt: "Santhosh Anand - Co-Director Tech"
-      },
+      
       {
         name: "Shri Naveen Kumar",
         position: "Director - Food Committee",
