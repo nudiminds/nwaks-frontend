@@ -630,7 +630,7 @@ const en = {
     ],
     "2025": {
       title: "Rajyothsava 2025",
-      description: "Our 2025 Rajyothsava celebration was held on November 3rd at the Jones Center in Springdale. Over 500 community members attended the event, which featured 20+ cultural performances, community awards, and a traditional dinner.",
+      description: "Our 2025 Rajyothsava celebration was held on November 3rd at Metroplex in Rogers. Over 500 community members attended the event, which featured 20+ cultural performances, community awards, and a traditional dinner.",
       stats: [
         { label: "Attendees", value: "500+", key: "attendees" },
         { label: "Performances", value: "20+", key: "performances" },
