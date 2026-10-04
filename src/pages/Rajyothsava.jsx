@@ -13,7 +13,7 @@ export default function Rajyothsava() {
   }
 
   const highlights = t.rajyothsava.highlights
-  const stats = t.rajyothsava["2024"].stats
+  const stats = t.rajyothsava["2025"].stats
 
   return (
     <div className="bg-background">
@@ -62,11 +62,11 @@ export default function Rajyothsava() {
         {/* 2024 SECTION */}
         <section className="bg-white rounded-3xl shadow-lg p-12 space-y-10">
           <h2 className="font-heading text-3xl text-primary text-center">
-            {t.rajyothsava["2024"].title}
+            {t.rajyothsava["2025"].title}
           </h2>
 
           <p className="text-charcoal text-lg leading-relaxed text-center max-w-4xl mx-auto">
-            {t.rajyothsava["2024"].description}
+            {t.rajyothsava["2025"].description}
           </p>
 
           {/* STATISTICS */}
