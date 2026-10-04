@@ -18,8 +18,8 @@ export default function CoreCommittee() {
   const committeeMembers = t.coreCommittee.members.map((member, index) => {
     // Map the translated data with actual images
     const images = [
-      Srivasthsa, Adarsh, Suprita, Harish, Sanjay, 
-      Mahantesh, Avinash, Santhosh, Naveen, Sudhan
+      Srivasthsa, Suprita, Harish, Sanjay, 
+      Mahantesh, Avinash, Naveen, Sudhan
     ]
     return {
       ...member,
